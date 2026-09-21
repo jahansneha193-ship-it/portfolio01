@@ -2,5 +2,7 @@
   "name": "Yeamin Jahan Portfolio",
   "description": "Portfolio of Yeamin Jahan — BBA Student, AI Learner & Creative Marketing Enthusiast.",
   "requestFramePermissions": [],
-  "majorCapabilities": ["MAJOR_CAPABILITY_SERVER_SIDE_GEMINI_API"]
+  "majorCapabilities": [
+    "MAJOR_CAPABILITY_SERVER_SIDE_GEMINI_API"
+  ]
 }
