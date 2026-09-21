@@ -1,0 +1,95 @@
+@import "tailwindcss";
+
+@theme {
+  --color-lavender-50: #FAF7FF;
+  --color-lavender-100: #F2ECFD;
+  --color-lavender-200: #E6DBF9;
+  --color-lavender-300: #D4BFF5;
+  --color-lavender-400: #9B74E2;
+  --color-lavender-primary: #7B4FD0;
+  --color-lavender-hover: #6839B8;
+  --color-lavender-dark: #1E1A2B;
+  --color-lavender-muted: #5A5469;
+
+  --font-heading: 'Fraunces', Georgia, serif;
+  --font-body: 'Plus Jakarta Sans', system-ui, sans-serif;
+  --font-handwriting: 'Caveat', cursive, sans-serif;
+}
+
+body {
+  font-family: var(--font-body);
+  color: #1E1A2B;
+  background-color: #FFFFFF;
+}
+
+.font-heading {
+  font-family: var(--font-heading);
+}
+
+.font-handwriting {
+  font-family: var(--font-handwriting);
+}
+
+/* Arch shape for hero portrait */
+.arch-portrait-frame {
+  border-top-left-radius: 9999px;
+  border-top-right-radius: 9999px;
+  border-bottom-left-radius: 40px;
+  border-bottom-right-radius: 40px;
+}
+
+/* Orbit badge animations */
+@keyframes orbit1 {
+  0% { transform: rotate(0deg) translateX(145px) rotate(0deg); }
+  100% { transform: rotate(360deg) translateX(145px) rotate(-360deg); }
+}
+@keyframes orbit2 {
+  0% { transform: rotate(120deg) translateX(145px) rotate(-120deg); }
+  100% { transform: rotate(480deg) translateX(145px) rotate(-480deg); }
+}
+@keyframes orbit3 {
+  0% { transform: rotate(240deg) translateX(145px) rotate(-240deg); }
+  100% { transform: rotate(600deg) translateX(145px) rotate(-600deg); }
+}
+
+@keyframes orbit1Mobile {
+  0% { transform: rotate(0deg) translateX(70px) rotate(0deg); }
+  100% { transform: rotate(360deg) translateX(70px) rotate(-360deg); }
+}
+@keyframes orbit2Mobile {
+  0% { transform: rotate(120deg) translateX(70px) rotate(-120deg); }
+  100% { transform: rotate(480deg) translateX(70px) rotate(-480deg); }
+}
+@keyframes orbit3Mobile {
+  0% { transform: rotate(240deg) translateX(70px) rotate(-240deg); }
+  100% { transform: rotate(600deg) translateX(70px) rotate(-600deg); }
+}
+
+.badge-orbit-1 {
+  animation: orbit1 28s linear infinite;
+}
+.badge-orbit-2 {
+  animation: orbit2 28s linear infinite;
+}
+.badge-orbit-3 {
+  animation: orbit3 28s linear infinite;
+}
+
+@media (max-width: 640px) {
+  .badge-orbit-1 {
+    animation: orbit1Mobile 28s linear infinite;
+  }
+  .badge-orbit-2 {
+    animation: orbit2Mobile 28s linear infinite;
+  }
+  .badge-orbit-3 {
+    animation: orbit3Mobile 28s linear infinite;
+  }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .badge-orbit-1, .badge-orbit-2, .badge-orbit-3 {
+    animation: none !important;
+  }
+}
+
